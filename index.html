@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+    background-image: url('https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg');
+}
+        .cover {
+            background-image: url('cover-image-url.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .cover h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .cover p {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+        .cover a {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 1em 2em;
+            background-color: #ff5733;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+        nav a:hover {
+            background-color: #ff5733;
+            border-radius: 5px;
+        }
+        section {
+            padding: 2em;
+        }
+        #about-project, #about-me, #key-features, #about, #video {
+            background-color: #f4f4f4;
+            margin: 2em 0;
+            border-radius: 10px;
+        }
+        #key-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature {
+            flex: 1 1 calc(33% - 2em);
+            margin: 1em;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1em;
+        }
+        .feature img {
+            max-width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .feature h3 {
+            margin-top: 0.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 2em;
+            background-color: #333;
+            color: white;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin: 1em 0;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 1em;
+        }
+        .team-member a {
+            margin-right: 1em;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about-project">About the Project</a>
+    <a href="#key-features">Key Features</a>
+    <a href="#about-me">About Me</a>
+    <a href="#about">About</a>
+    <a href="#video">Video</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="cover">
+    <h1>My Awesome Project</h1>
+    <p>Making the world a better place, one code at a time.</p>
+    <a href="https://your-deployed-project-url.com">View Project</a>
+</div>
+
+<section id="about-project">
+    <h2>About the Project</h2>
+    <p>This project is a web application designed to solve a specific problem...</p>
+</section>
+
+<section id="key-features">
+    <h2>Key Features</h2>
+    <div class="feature">
+        <img src="feature1-image-url.jpg" alt="Feature 1">
+        <h3>Feature 1: User-Friendly Interface</h3>
+        <p>Our application has a sleek, intuitive interface that makes it easy for users of all ages to navigate and use effectively.</p>
+    </div>
+    <div class="feature">
+        <img src="feature2-image-url.jpg" alt="Feature 2">
+        <h3>Feature 2: Real-Time Data</h3>
+        <p>Get real-time updates and insights with our powerful data analytics tools, designed to help you make informed decisions quickly.</p>
+    </div>
+    <div class="feature">
+        <img src="feature3-image-url.jpg" alt="Feature 3">
+        <h3>Feature 3: Secure Transactions</h3>
+        <p>Experience peace of mind with our top-notch security measures that ensure your transactions and personal information are always safe.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This project was inspired by a personal experience. One day, while trying to manage my finances, I realized how difficult it was to keep track of my expenses and savings. I wanted to create a tool that would simplify this process for everyone. That's how this project was born. It has been a challenging yet rewarding journey, and I'm proud to present it as part of my portfolio for Holberton School. <a href="https://www.holbertonschool.com" target="_blank">Learn more about Holberton School.</a></p>
+    
+    <h3>Meet the Team</h3>
+    <div class="team-member">
+        <img src="team-member1-photo-url.jpg" alt="Team Member 1">
+        <div>
+            <p><strong>Team Member 1</strong></p>
+            <a href="https://www.linkedin.com/in/team-member1" target="_blank">LinkedIn</a>
+            <a href="https://github.com/team-member1" target="_blank">GitHub</a>
+            <a href="https://twitter.com/team-member1" target="_blank">Twitter</a>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="team-member2-photo-url.jpg" alt="Team Member 2">
+        <div>
+            <p><strong>Team Member 2</strong></p>
+            <a href="https://www.linkedin.com/in/team-member2" target="_blank">LinkedIn</a>
+            <a href="https://github.com/team-member2" target="_blank">GitHub</a>
+            <a href="https://twitter.com/team-member2" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <h3>Project Repository</h3>
+    <p>You can find the source code for this project on <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>.</p>
+</section>
+
+<section id="video">
+    <h2>Project<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .cover {
+            background-image: url('cover-image-url.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .cover h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .cover p {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+        .cover a {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 1em 2em;
+            background-color: #ff5733;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1em;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+        nav a:hover {
+            background-color: #ff5733;
+            border-radius: 5px;
+        }
+        section {
+            padding: 2em;
+        }
+        #about-project, #about-me, #key-features, #about, #video {
+            background-color: #f4f4f4;
+            margin: 2em 0;
+            border-radius: 10px;
+        }
+        #key-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature {
+            flex: 1 1 calc(33% - 2em);
+            margin: 1em;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1em;
+        }
+        .feature img {
+            max-width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        .feature h3 {
+            margin-top: 0.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 2em;
+            background-color: #333;
+            color: white;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin: 1em 0;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 1em;
+        }
+        .team-member a {
+            margin-right: 1em;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about-project">About the Project</a>
+    <a href="#key-features">Key Features</a>
+    <a href="#about-me">About Me</a>
+    <a href="#about">About</a>
+    <a href="#video">Video</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="cover">
+    <h1>My Awesome Project</h1>
+    <p>Making the world a better place, one code at a time.</p>
+    <a href="https://your-deployed-project-url.com">View Project</a>
+</div>
+
+<section id="about-project">
+    <h2>About the Project</h2>
+    <p>This project is a web application designed to solve a specific problem...</p>
+</section>
+
+<section id="key-features">
+    <h2>Key Features</h2>
+    <div class="feature">
+        <img src="feature1-image-url.jpg" alt="Feature 1">
+        <h3>Feature 1: User-Friendly Interface</h3>
+        <p>Our application has a sleek, intuitive interface that makes it easy for users of all ages to navigate and use effectively.</p>
+    </div>
+    <div class="feature">
+        <img src="feature2-image-url.jpg" alt="Feature 2">
+        <h3>Feature 2: Real-Time Data</h3>
+        <p>Get real-time updates and insights with our powerful data analytics tools, designed to help you make informed decisions quickly.</p>
+    </div>
+    <div class="feature">
+        <img src="feature3-image-url.jpg" alt="Feature 3">
+        <h3>Feature 3: Secure Transactions</h3>
+        <p>Experience peace of mind with our top-notch security measures that ensure your transactions and personal information are always safe.</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This project was inspired by a personal experience. One day, while trying to manage my finances, I realized how difficult it was to keep track of my expenses and savings. I wanted to create a tool that would simplify this process for everyone. That's how this project was born. It has been a challenging yet rewarding journey, and I'm proud to present it as part of my portfolio for Holberton School. <a href="https://www.holbertonschool.com" target="_blank">Learn more about Holberton School.</a></p>
+    
+    <h3>Meet the Team</h3>
+    <div class="team-member">
+        <img src="team-member1-photo-url.jpg" alt="Team Member 1">
+        <div>
+            <p><strong>Team Member 1</strong></p>
+            <a href="https://www.linkedin.com/in/team-member1" target="_blank">LinkedIn</a>
+            <a href="https://github.com/team-member1" target="_blank">GitHub</a>
+            <a href="https://twitter.com/team-member1" target="_blank">Twitter</a>
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="team-member2-photo-url.jpg" alt="Team Member 2">
+        <div>
+            <p><strong>Team Member 2</strong></p>
+            <a href="https://www.linkedin.com/in/team-member2" target="_blank">LinkedIn</a>
+            <a href="https://github.com/team-member2" target="_blank">GitHub</a>
+            <a href="https://twitter.com/team-member2" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <h3>Project Repository</h3>
+    <p>You can find the source code for this project on <a href="https://github.com/your-github-repo" target="_blank">GitHub</a>.</p>
+</section>
+
+<section id="video">
+    <h2>Project Video</h2>
+    <video width="100%" controls>
+        <source src="your-video-url.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>This video introduces our team members, explains the story behind our project, walks through some of its key features, and discusses what's next for our project. We hope you enjoy it!</p>
+</section>
+
+<section id="about-me">
+    <h2>About Me</h2>
+    <p>Hello! I’m a passionate developer with a love for creating innovative solutions...</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me at <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Awesome Project. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+ Video</h2>
+    <video width="100%" controls>
+        <source src="your-video-url.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>This video introduces our team members, explains the story behind our project, walks through some of its key features, and discusses what's next for our project. We hope you enjoy it!</p>
+</section>
+
+<section id="about-me">
+    <h2>About Me</h2>
+    <p>Hello! I’m a passionate developer with a love for creating innovative solutions...</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me at <a href="mailto:kingsleycaesar581@gmail.com">kingsleycaesar581@gmail.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Awesome Project. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
