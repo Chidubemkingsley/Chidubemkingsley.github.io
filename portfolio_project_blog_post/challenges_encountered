@@ -1,0 +1,21 @@
+During the development of the **Smart Route Planner**, one of the most difficult technical challenges I faced was optimizing the route calculation to ensure it always returned the path with the least elevation gain. Initially, I thought this would be straightforward by leveraging the Google Maps API’s built-in routing and elevation services, but it turned out to be more complex than expected.
+
+**Situation:**  
+The application needed to compute the optimal route between two points with the least elevation gain. The Google Maps API provides elevation data but doesn't directly support finding the least elevated route. My task was to integrate these two aspects in a way that provided accurate and reliable results to users.
+
+**Task:**  
+I needed to create a custom algorithm that could take multiple potential routes from the Google Maps API and then evaluate these routes based on elevation data to determine the one with the least elevation gain. This required not only retrieving route data but also processing elevation profiles for each segment of the route.
+
+**Action:**  
+First, I researched various algorithms and techniques for pathfinding and elevation optimization. I settled on using a modified version of Dijkstra's algorithm, which is typically used for finding the shortest path in a graph but adapted it to minimize elevation gain instead of distance.
+
+I implemented the following steps:
+1. **Data Collection:** I used the Google Maps API to fetch multiple potential routes between the start and end points. For each route, I broke it down into smaller segments.
+2. **Elevation Data Retrieval:** For each segment, I used the Google Elevation API to retrieve the elevation profile. This required batching requests to avoid exceeding API rate limits.
+3. **Route Evaluation:** I modified Dijkstra’s algorithm to account for elevation gain as a weight factor. Each node in the graph represented a segment of the route, and edges represented the elevation gain between segments.
+4. **Algorithm Implementation:** I wrote a custom function to evaluate all potential routes and select the one with the least total elevation gain. This function needed to be efficient to handle real-time requests from users.
+
+**Result:**  
+After several iterations and extensive testing, I succeeded in creating an optimized route calculation algorithm that consistently found the least elevated route. This enhancement significantly improved the user experience, making the application highly valuable for cyclists who want to avoid steep climbs.
+
+The result was a robust application that met its primary goal of minimizing elevation gain for cyclists, ultimately making cycling in hilly areas more accessible. This challenge taught me a great deal about algorithm optimization, API integration, and the importance of efficient data processing. Solving this problem was not only rewarding but also provided a critical feature that set the **Smart Route Planner** apart from other routing applications.

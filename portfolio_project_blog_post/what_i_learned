@@ -1,0 +1,42 @@
+During the development of the **Smart Route Planner**, one of the most challenging technical hurdles I faced was optimizing the route calculation to ensure it consistently returned the path with the least elevation gain. Initially, I anticipated that leveraging the Google Maps API’s built-in routing and elevation services would be straightforward, but integrating these services to achieve accurate, minimal elevation routes proved to be more intricate than expected.
+
+**Situation:**  
+The core functionality of the application required calculating the optimal route between two points with the least elevation gain. Although the Google Maps API provides routing and elevation data, it doesn't inherently support finding the least elevated route. My objective was to merge these two aspects seamlessly to offer precise and reliable results to users.
+
+**Task:**  
+I needed to develop a custom algorithm capable of taking multiple potential routes from the Google Maps API, retrieving elevation data for each segment of these routes, and evaluating them to determine the one with the least elevation gain. This required not only efficient data retrieval but also sophisticated processing of elevation profiles.
+
+**Action:**  
+The approach involved several key steps:
+
+1. **Data Collection:** I began by using the Google Maps API to fetch multiple potential routes between the user-defined start and end points. For each route, I divided it into smaller, manageable segments.
+2. **Elevation Data Retrieval:** For each segment, I used the Google Elevation API to gather elevation profiles. This process involved batching requests carefully to avoid exceeding API rate limits and ensuring efficient data collection.
+3. **Route Evaluation:** I adapted Dijkstra’s algorithm, traditionally used for finding the shortest path in a graph, to minimize elevation gain instead of distance. Each node represented a route segment, and the edges represented the elevation gain between these segments.
+4. **Algorithm Implementation:** I wrote a custom function to evaluate all potential routes and select the one with the least total elevation gain. Ensuring this function was efficient enough to handle real-time user requests was critical.
+
+**Result:**  
+After multiple iterations and extensive testing, I successfully developed an optimized route calculation algorithm that reliably found the least elevated route. This enhancement significantly improved the user experience, making the application highly valuable for cyclists seeking to avoid steep climbs. The project culminated in a robust application that fulfilled its primary goal of minimizing elevation gain for cyclists, thereby making cycling in hilly areas more accessible.
+
+**Technical Takeaways:**
+1. **Algorithm Optimization:** The experience deepened my understanding of algorithm optimization, particularly in modifying standard algorithms to meet specific requirements.
+2. **API Integration:** I gained substantial experience in integrating multiple APIs and handling data efficiently, which is crucial for developing feature-rich applications.
+3. **Data Processing:** The challenge underscored the importance of efficient data processing and the need for careful resource management when working with rate-limited APIs.
+
+**What I Might Do Differently:**
+1. **Early Prototyping:** I would start with more extensive prototyping and simulations to better understand potential bottlenecks and challenges early in the development process.
+2. **User Feedback:** Incorporating user feedback earlier could have provided insights into real-world use cases and potential issues, allowing for more user-centric design and development.
+
+**What I Learned About Myself as an Engineer:**
+1. **Problem-Solving:** This project reaffirmed my ability to tackle complex problems and find innovative solutions. It highlighted my resilience and determination to overcome technical challenges.
+2. **Adaptability:** I learned to adapt quickly to changing requirements and unexpected difficulties, a crucial skill in software development.
+3. **Collaboration:** While I worked independently on this project, I recognized the value of collaboration and peer input, which I will seek more actively in future projects.
+
+**Future Engineering Path:**
+This project has informed my engineering path by emphasizing the importance of algorithm design, efficient data handling, and API integration. It has inspired me to pursue further studies and projects in these areas, particularly in optimizing real-time applications. Additionally, it has sparked an interest in developing user-centric applications that solve real-world problems, enhancing the practical impact of my work.
+
+**Beliefs Confirmed or Questioned:**
+- **Value of Prototyping:** The necessity of early and thorough prototyping was confirmed, as it can prevent significant issues later in the development cycle.
+- **Importance of User Feedback:** I confirmed the critical role of user feedback in shaping effective and user-friendly applications.
+- **API Limitations:** I questioned my initial belief in the sufficiency of built-in API functionalities, learning that custom solutions are often necessary to meet specific needs.
+
+In summary, the **Smart Route Planner** project was a challenging yet rewarding experience that significantly enhanced my technical skills and shaped my approach to future projects. It underscored the importance of perseverance, adaptability, and user-centric design in engineering.
