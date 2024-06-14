@@ -1,0 +1,60 @@
+Evaluating your commit history from the perspective of a potential employer is an excellent way to ensure that my work is professional and easy to understand. 
+
+### Evaluating my Commit Messages
+
+1. **Clarity:** Each commit message should clearly describe the change or feature implemented. Avoid vague messages like "Fixed stuff" or "Updated code."
+   
+2. **Conciseness:** While being clear, commit messages should also be concise. Summarize the change in a few words or a short sentence.
+   
+3. **Consistency:** Use a consistent format for your commit messages. For example, you might start with a verb (e.g., "Add", "Fix", "Update") and follow with a brief description.
+
+4. **Relevance:** Ensure that the commit message is relevant to the actual changes made. Don’t include unrelated changes in the same commit.
+
+5. **Details:** For more complex changes, consider adding a brief explanation in the commit body (below the main message), detailing what was done and why.
+
+### Sample Good Commit Messages
+
+- `Add user authentication feature`
+- `Fix bug in route calculation`
+- `Update README with installation instructions`
+- `Refactor API request handler for better performance`
+
+### Editing Commit Messages on GitHub
+
+You can edit commit messages using Git commands if you haven't pushed them to a remote repository yet, or you can amend the last commit message if it's the most recent one. If you need to change messages that have already been pushed, you'll need to use an interactive rebase. Here’s how you can do that:
+
+#### Editing the Most Recent Commit Message
+
+1. **Amend the Last Commit:**
+   ```bash
+   git commit --amend -m "New commit message"
+   ```
+
+2. **Push the Changes:**
+   ```bash
+   git push --force
+   ```
+
+#### Editing Older Commit Messages
+
+1. **Start an Interactive Rebase:**
+   ```bash
+   git rebase -i HEAD~n
+   ```
+   Replace `n` with the number of commits you want to go back.
+
+2. **Change the Message:**
+   - An editor will open with a list of commits.
+   - Replace `pick` with `reword` (or `edit` for more detailed changes) for the commits you want to change.
+   - Save and close the editor.
+
+3. **Edit the Commit Message:**
+   - For each commit marked for rewording, an editor will open again, allowing you to change the commit message.
+   - Save and close the editor.
+
+4. **Push the Changes:**
+   ```bash
+   git push --force
+   ```
+
+
